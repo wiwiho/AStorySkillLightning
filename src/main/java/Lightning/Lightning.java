@@ -3,6 +3,7 @@ package Lightning;
 import ars.AStory.api.SkillAPI;
 import ars.AStory.api.data;
 import ars.AStory.api.rd;
+import org.bukkit.Effect;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.entity.LivingEntity;
@@ -19,6 +20,7 @@ public class Lightning{
         Location location = block.getLocation();
 
         player.getWorld().strikeLightning(location);
+        player.getWorld().playEffect(location, Effect.EXPLOSION, 0, 1);
 
         double modifier = SkillAPI.getSkillInfo(player, "Lightning", "Modifier");
         int duration = (int) SkillAPI.getSkillInfo(player, "Lightning", "Duration");
