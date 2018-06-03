@@ -1,3 +1,5 @@
+package Lightning;
+
 import ars.AStory.api.SkillAPI;
 import ars.AStory.api.data;
 import ars.AStory.api.rd;
